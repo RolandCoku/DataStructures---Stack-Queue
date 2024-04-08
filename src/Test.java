@@ -46,7 +46,7 @@ public class Test {
 //        System.out.println("Printing the number with the biggest value: ");
 //        ArrayStack.printBiggestBinary(stack3, stack4);
 //
-//        System.out.println("Move 3rd element to the top: ");
+//        System.out.println("Move 3rd element to the peek: ");
 //        stack.printStack();
 //        stack.moveToTheTop(3);
 //        stack.printStack();
@@ -74,10 +74,11 @@ public class Test {
         queueStack.push(2);
         queueStack.push(3);
         queueStack.printStack();
-        System.out.println("Top element: " + queueStack.top());
-        System.out.println("Pop element: " + queueStack.pop());
+        System.out.println("Top element: " + queueStack.peek());
         queueStack.printStack();
         System.out.println("Size: " + queueStack.Size());
+        System.out.println("Top and pop element: " + queueStack.pop());
+        queueStack.printStack();
 
     }
 }

@@ -18,19 +18,13 @@ public class ArrayStack <T>{
         }
         theArray[++topOfStack] = newElement;
     }
-    public T top(){
+    public T peek(){
         if(isEmpty()){
             return null;
         }
         return theArray[topOfStack];
     }
-    public void pop(){
-        if(isEmpty()){
-            return;
-        }
-        topOfStack--;
-    }
-    public T topAndPop(){
+    public T pop(){
         if(isEmpty()){
             return null;
         }
@@ -53,7 +47,7 @@ public class ArrayStack <T>{
 //c. Ndertoni nje funksion qe rendit stiven.
 //d. Ndertoni nje funksion qe kopjon nje Stive S1 ne nje stive S2.
 //e. Jepen dy stiva S1 dhe S2 elementet e te cilave jane 0 ose 1. Duke i menduar stivat si numra te paraqitur ne sistemin binar, te shkruhet nje program qe afishon stiven qe permban numrin me te madh.
-//f. Ndertoni funksionin qe i zhvendos ne top te stives elementin e k-te te saj.
+//f. Ndertoni funksionin qe i zhvendos ne peek te stives elementin e k-te te saj.
 
     public int getStackSize(){
         return topOfStack + 1;
@@ -68,9 +62,9 @@ public class ArrayStack <T>{
     public void sortStack(){
         ArrayStack<T> sortedStack = new ArrayStack<>();
         while (!this.isEmpty()){
-            T temp = this.topAndPop();
-            while (!sortedStack.isEmpty() && ((Comparable)temp).compareTo(sortedStack.top()) < 0){
-                this.push(sortedStack.topAndPop());
+            T temp = this.pop();
+            while (!sortedStack.isEmpty() && ((Comparable)temp).compareTo(sortedStack.peek()) < 0){
+                this.push(sortedStack.pop());
             }
             sortedStack.push(temp);
         }
@@ -81,10 +75,10 @@ public class ArrayStack <T>{
         stack.makeEmpty();
         ArrayStack<T> copyStack = new ArrayStack<>();
         while (!this.isEmpty()){
-            copyStack.push(this.topAndPop());
+            copyStack.push(this.pop());
         }
         while (!copyStack.isEmpty()){
-            T temp = copyStack.topAndPop();
+            T temp = copyStack.pop();
             this.push(temp);
             stack.push(temp);
         }
@@ -104,11 +98,11 @@ public class ArrayStack <T>{
 
         while (!stack1.isEmpty() || !stack2.isEmpty()){
             if(!stack1.isEmpty()){
-                nr1 += stack1.topAndPop()*((int) Math.pow(2,pow1));
+                nr1 += stack1.pop()*((int) Math.pow(2,pow1));
                 pow1--;
             }
             if(!stack2.isEmpty()){
-                nr2 += stack2.topAndPop()*((int)Math.pow(2,pow2));
+                nr2 += stack2.pop()*((int)Math.pow(2,pow2));
                 pow2--;
             }
         }
@@ -145,12 +139,12 @@ public class ArrayStack <T>{
         ArrayStack<T> tempStack = new ArrayStack<>();
         int i = 0;
         while (i < stackSize - k ){
-            tempStack.push(this.topAndPop());
+            tempStack.push(this.pop());
             i++;
         }
-        T temp = this.topAndPop();
+        T temp = this.pop();
         while (!tempStack.isEmpty()){
-            this.push(tempStack.topAndPop());
+            this.push(tempStack.pop());
         }
         this.push(temp);
     }
@@ -165,7 +159,7 @@ public class ArrayStack <T>{
             nr /= 16;
         }
         while (!stack.isEmpty()){
-            int temp = stack.topAndPop();
+            int temp = stack.pop();
             if(temp < 10){
                 System.out.print(temp);
             }else {

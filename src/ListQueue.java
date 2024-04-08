@@ -34,7 +34,7 @@ public class ListQueue<T extends Comparable<T>> {
             return front.element;
         }
     }
-    public void makeEmpty(){
+    public void clear(){
         front = null;
         back = null;
     }

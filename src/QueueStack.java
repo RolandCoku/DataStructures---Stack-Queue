@@ -1,14 +1,15 @@
-public class QueueStack <AnyType extends Comparable<AnyType>>{
+//Implement a stack using two queues.
+public class QueueStack <T extends Comparable<T>>{
 
-    private ListQueue<AnyType> queue1;
-    private ListQueue<AnyType> queue2;
+    private ListQueue<T> queue1;
+    private ListQueue<T> queue2;
 
     public QueueStack(){
-        queue1 = new ListQueue<AnyType>();
-        queue2 = new ListQueue<AnyType>();
+        queue1 = new ListQueue<T>();
+        queue2 = new ListQueue<T>();
     }
 
-    public void push(AnyType element){
+    public void push(T element){
         if(queue1.isEmpty()){
             queue1.enqueue(element);
             while(!queue2.isEmpty()){
@@ -22,15 +23,7 @@ public class QueueStack <AnyType extends Comparable<AnyType>>{
         }
     }
 
-    public AnyType pop(){
-        if(queue1.isEmpty()){
-            return queue2.dequeue();
-        }else{
-            return queue1.dequeue();
-        }
-    }
-
-    public AnyType top(){
+    public T peek(){
         if(queue1.isEmpty()){
             return queue2.getFront();
         }else{
@@ -38,7 +31,7 @@ public class QueueStack <AnyType extends Comparable<AnyType>>{
         }
     }
 
-    public AnyType topAndPop(){
+    public T pop(){
         if(queue1.isEmpty()){
             return queue2.dequeue();
         }else{
