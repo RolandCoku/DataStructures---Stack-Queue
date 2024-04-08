@@ -193,9 +193,4 @@ public class ArrayStack <T>{
         }
     }
 
-//Ushtrimi 3
-//Dy stiva jane vendosur ne nje vektor me madhesi 1000. Ndertoni nje tip abstrakt te dhenash qe implementon veprimet qe kryhen me kete strukture.
-
-//Ushtrimi 4
-//Implementoni ADT per radhen ne nje strukture qe perdor dy stiva duke perdorur metodat e implementuara per stiven.
 }

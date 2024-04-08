@@ -48,6 +48,16 @@ public class ListQueue<T extends Comparable<T>> {
         System.out.println();
     }
 
+    public int size(){
+        int count = 0;
+        ListNode<T> current = front;
+        while(current != null){
+            count++;
+            current = current.next;
+        }
+        return count;
+    }
+
 //**********************************************************************************************************************
 //EXERCISES
 
