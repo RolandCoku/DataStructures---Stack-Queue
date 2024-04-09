@@ -1,4 +1,5 @@
 Ushtrim 1
+
 Ne klasen ArrayStack te implementuar ne leksion (Stiva implementohet nepermjet nje vektori) implementoni funksionet e meposhtme:
 a. Ndertoni nje funksion qe kthen gjatesine e stives.
 b. Ndertoni nje funksion qe printon nje stive.
