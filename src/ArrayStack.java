@@ -9,7 +9,7 @@ public class ArrayStack <T>{
     public boolean isEmpty(){
         return topOfStack == -1;
     }
-    public void makeEmpty(){
+    public void clear(){
         topOfStack = -1;
     }
     public void push(T newElement){
@@ -72,7 +72,7 @@ public class ArrayStack <T>{
         this.theArray = sortedStack.theArray;
     }
     public void copyStack(ArrayStack<T> stack){
-        stack.makeEmpty();
+        stack.clear();
         ArrayStack<T> copyStack = new ArrayStack<>();
         while (!this.isEmpty()){
             copyStack.push(this.pop());

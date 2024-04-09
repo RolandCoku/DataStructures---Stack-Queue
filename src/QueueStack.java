@@ -5,8 +5,8 @@ public class QueueStack <T extends Comparable<T>>{
     private ListQueue<T> queue2;
 
     public QueueStack(){
-        queue1 = new ListQueue<T>();
-        queue2 = new ListQueue<T>();
+        queue1 = new ListQueue<>();
+        queue2 = new ListQueue<>();
     }
 
     public void push(T element){

@@ -67,18 +67,46 @@ public class Test {
 //        System.out.println("Reversing queue: ");
 //        queue.reverseQueue();
 //        queue.printQueue();
+//
+//
+//        QueueStack<Integer> queueStack = new QueueStack<>();
+//        queueStack.push(1);
+//        queueStack.push(2);
+//        queueStack.push(3);
+//        queueStack.printStack();
+//        System.out.println("Top element: " + queueStack.peek());
+//        queueStack.printStack();
+//        System.out.println("Size: " + queueStack.Size());
+//        System.out.println("Top and pop element: " + queueStack.pop());
+//        queueStack.printStack();
+
+//        DoubleStackArray<Integer> doubleStackArray = new DoubleStackArray<>();
+//        doubleStackArray.push1(1);
+//        doubleStackArray.push1(2);
+//        doubleStackArray.push1(3);
+//        doubleStackArray.push2(3);
+//        doubleStackArray.push2(2);
+//        doubleStackArray.push2(1);
+//        doubleStackArray.print1();
+//        doubleStackArray.print2();
+
+        ArrayQueue<Integer> arrayQueue = new ArrayQueue<>();
+        arrayQueue.enqueue(1);
+        arrayQueue.enqueue(2);
+        arrayQueue.enqueue(3);
+        arrayQueue.enqueue(4);
+        System.out.println("Queue elements: ");
+        arrayQueue.printQueue();
+        arrayQueue.dequeue();
+        arrayQueue.dequeue();
+        System.out.println("Queue elements: ");
+        arrayQueue.printQueue();
+        arrayQueue.enqueue(5);
+        arrayQueue.enqueue(6);
+        System.out.println("Queue elements: ");
+        arrayQueue.printQueue();
 
 
-        QueueStack<Integer> queueStack = new QueueStack<>();
-        queueStack.push(1);
-        queueStack.push(2);
-        queueStack.push(3);
-        queueStack.printStack();
-        System.out.println("Top element: " + queueStack.peek());
-        queueStack.printStack();
-        System.out.println("Size: " + queueStack.Size());
-        System.out.println("Top and pop element: " + queueStack.pop());
-        queueStack.printStack();
 
     }
 }
