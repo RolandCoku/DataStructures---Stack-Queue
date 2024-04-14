@@ -19,7 +19,7 @@ public class ArrayQueue <T>{
         if((back+1 == front)||((front == 0)&&(back == theArray.length - 1))){
             doubleArray();
         }
-        size++;
+        size++;//Every time that the method enqueue is called the size of the queue must increase by 1
         if (isEmpty()){//In the case that theArray is empty we have to increment front and back
             theArray[++back] = newElement;
             front++;
@@ -40,8 +40,9 @@ public class ArrayQueue <T>{
         if(front != theArray.length-1){
             return theArray[front++];
         }else{
+            T temp = theArray[front];
             front = 0;
-            return theArray[front];
+            return temp;
         }
     }
     public T getFront(){

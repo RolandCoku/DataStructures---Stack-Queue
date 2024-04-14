@@ -89,24 +89,45 @@ public class Test {
 //        doubleStackArray.push2(1);
 //        doubleStackArray.print1();
 //        doubleStackArray.print2();
+//
+//        ArrayQueue<Integer> arrayQueue = new ArrayQueue<>();
+//        arrayQueue.enqueue(1);
+//        arrayQueue.enqueue(2);
+//        arrayQueue.enqueue(3);
+//        arrayQueue.enqueue(4);
+//        System.out.println("Queue elements: ");
+//        arrayQueue.printQueue();
+//        arrayQueue.dequeue();
+//        arrayQueue.dequeue();
+//        System.out.println("Queue elements: ");
+//        arrayQueue.printQueue();
+//        arrayQueue.enqueue(5);
+//        arrayQueue.enqueue(6);
+//        System.out.println("Queue elements: ");
+//        arrayQueue.printQueue();
 
-        ArrayQueue<Integer> arrayQueue = new ArrayQueue<>();
-        arrayQueue.enqueue(1);
-        arrayQueue.enqueue(2);
-        arrayQueue.enqueue(3);
-        arrayQueue.enqueue(4);
-        System.out.println("Queue elements: ");
-        arrayQueue.printQueue();
-        arrayQueue.dequeue();
-        arrayQueue.dequeue();
-        System.out.println("Queue elements: ");
-        arrayQueue.printQueue();
-        arrayQueue.enqueue(5);
-        arrayQueue.enqueue(6);
-        System.out.println("Queue elements: ");
-        arrayQueue.printQueue();
-
-
-
+        ArrayDoubleEndedQueue<Integer> arrayDoubleEndedQueue = new ArrayDoubleEndedQueue<>();
+        arrayDoubleEndedQueue.enqueueFront(1);
+        arrayDoubleEndedQueue.enqueueFront(2);
+        arrayDoubleEndedQueue.enqueueFront(3);
+        arrayDoubleEndedQueue.enqueueFront(7);
+        arrayDoubleEndedQueue.enqueueFront(10);
+        arrayDoubleEndedQueue.enqueueBack(4);
+        arrayDoubleEndedQueue.enqueueBack(5);
+        arrayDoubleEndedQueue.enqueueBack(6);
+        arrayDoubleEndedQueue.enqueueBack(8);
+        arrayDoubleEndedQueue.enqueueBack(9);
+        System.out.println(arrayDoubleEndedQueue.getFront());
+        System.out.println(arrayDoubleEndedQueue.getBack());
+        arrayDoubleEndedQueue.printQueue();
+        System.out.println(arrayDoubleEndedQueue.dequeueFront());
+        System.out.println(arrayDoubleEndedQueue.getFront());
+        arrayDoubleEndedQueue.enqueueFront(11);
+        arrayDoubleEndedQueue.printQueue();
+        System.out.println(arrayDoubleEndedQueue.getFront());
+        System.out.println(arrayDoubleEndedQueue.dequeueBack());
+        System.out.println(arrayDoubleEndedQueue.getBack());
+        arrayDoubleEndedQueue.enqueueFront(12);
+        arrayDoubleEndedQueue.printQueue();
     }
 }
