@@ -49,5 +49,16 @@ public class ListStack<T extends Comparable<T>> {
         }
         return size;
     }
+//Ushtrimi 5.
+//Inverto nje stive ne menyre rekursive.
 
+    public void reverseStack(){
+
+    }
+//Ushtrimi 6.
+//Rendit nje stack ne menyre rekursive.
+
+    public void sortStack(){
+
+    }
 }
